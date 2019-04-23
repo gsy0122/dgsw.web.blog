@@ -1,0 +1,491 @@
+DELETE http://localhost:8080/user/delete/1
+Accept: application/json
+
+<> 2019-04-23T040159.200.json
+
+###
+
+DELETE http://localhost:8080/user/delete/1
+Accept: application/json
+
+<> 2019-04-23T035523.200.json
+
+###
+
+PUT http://localhost:8080/user/update/1
+Content-Type: application/json
+
+{
+  "email": "gsy0122@naver.com"
+}
+
+<> 2019-04-23T035520.200.json
+
+###
+
+PUT http://localhost:8080/user/update/1
+Content-Type: application/json
+
+{
+  "email": "gsy0122@naver.com"
+}
+
+<> 2019-04-23T035236.200.json
+
+###
+
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "account": "gsy0122",
+  "password": "1234",
+  "name": "강서연",
+  "email": "gsy0122@gmail.com",
+  "phone": "010-8366-9272",
+  "profilePath": "a.jpg"
+}
+
+<> 2019-04-23T035233.200.json
+
+###
+
+PUT http://localhost:8080/user/update/1
+Content-Type: application/json
+
+{
+  "email": "gsy0122@naver.com"
+}
+
+<> 2019-04-23T035224.200.json
+
+###
+
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "account": "gsy0122",
+  "password": "1234",
+  "name": "강서연",
+  "email": "gsy0122@gmail.com",
+  "phone": "010-8366-9272",
+  "profilePath": "a.jpg"
+}
+
+<> 2019-04-23T034838.200.json
+
+###
+
+PUT http://localhost:8080/user/update/1
+Content-Type: application/json
+
+{
+  "email": "gsy0122@naver.com"
+}
+
+<> 2019-04-23T034731.200.json
+
+###
+
+DELETE http://localhost:8080/post/delete/3
+Accept: application/json
+
+<> 2019-04-23T033955.200.json
+
+###
+
+GET http://localhost:8080/post/read/3
+Accept: application/json
+
+<> 2019-04-23T033951.200.json
+
+###
+
+PUT http://localhost:8080/post/update/3
+Content-Type: application/json
+
+{
+  "content": "hi there update"
+}
+
+<> 2019-04-23T033938.200.json
+
+###
+
+POST http://localhost:8080/post/create
+Content-Type: application/json
+
+{
+  "title": "hi",
+  "content": "hi there",
+  "userId": "1",
+  "pictures": null
+}
+
+<> 2019-04-23T033932.200.json
+
+###
+
+DELETE http://localhost:8080/post/delete/1
+Accept: application/json
+
+<> 2019-04-23T033902.200.json
+
+###
+
+GET http://localhost:8080/post/read/2
+Accept: application/json
+
+<> 2019-04-23T033900.200.json
+
+###
+
+PUT http://localhost:8080/post/update/1
+Content-Type: application/json
+
+{
+  "content": "hi there update"
+}
+
+<> 2019-04-23T033857.200.json
+
+###
+
+GET http://localhost:8080/post/read
+Accept: application/json
+
+<> 2019-04-23T033854.200.json
+
+###
+
+GET http://localhost:8080/post/read/2
+Accept: application/json
+
+<> 2019-04-23T033850.200.json
+
+###
+
+POST http://localhost:8080/post/create
+Content-Type: application/json
+
+{
+  "title": "hi",
+  "content": "hi there",
+  "userId": "1",
+  "imagePath": "a.jpg"
+}
+
+<> 2019-04-23T033828.200.json
+
+###
+
+DELETE http://localhost:8080/post/delete/1
+Accept: application/json
+
+<> 2019-04-23T033825.200.json
+
+###
+
+POST http://localhost:8080/post/create
+Content-Type: application/json
+
+{
+  "title": "hi",
+  "content": "hi there",
+  "userId": "1",
+  "imagePath": "a.jpg"
+}
+
+<> 2019-04-23T033817.200.json
+
+###
+
+DELETE http://localhost:8080/user/delete/1
+Accept: application/json
+
+<> 2019-04-23T033811.200.json
+
+###
+
+GET http://localhost:8080/user/read/1
+Accept: application/json
+
+<> 2019-04-23T033807.200.json
+
+###
+
+PUT http://localhost:8080/user/update/1
+Content-Type: application/json
+
+{
+  "email": "gsy0122@naver.com"
+}
+
+<> 2019-04-23T033804.200.json
+
+###
+
+GET http://localhost:8080/user/read
+Accept: application/json
+
+<> 2019-04-23T033757.200.json
+
+###
+
+GET http://localhost:8080/user/read/1
+Accept: application/json
+
+<> 2019-04-23T033753.200.json
+
+###
+
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "account": "gsy0122",
+  "password": "1234",
+  "name": "강서연",
+  "email": "gsy0122@gmail.com",
+  "phone": "010-8366-9272",
+  "profilePath": "a.jpg"
+}
+
+<> 2019-04-23T033746.200.json
+
+###
+
+DELETE http://localhost:8080/post/delete/1
+Accept: application/json
+
+###
+
+DELETE http://localhost:8080/post/delete/1
+Accept: application/json
+
+<> 2019-04-22T030549.200.json
+
+###
+
+DELETE http://localhost:8080/post/delete/2
+Accept: application/json
+
+<> 2019-04-22T030545.200.json
+
+###
+
+GET http://localhost:8080/post/read
+Accept: application/json
+
+<> 2019-04-22T030538.200.json
+
+###
+
+PUT http://localhost:8080/post/update/1
+Content-Type: application/json
+
+{
+  "content": "hi there update"
+}
+
+<> 2019-04-22T030535.200.json
+
+###
+
+POST http://localhost:8080/post/create
+Content-Type: application/json
+
+{
+  "title": "hi",
+  "content": "hi there",
+  "userId": "1",
+  "imagePath": "a.jpg"
+}
+
+<> 2019-04-22T030533.200.json
+
+###
+
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "account": "gsy0122",
+  "password": "1234",
+  "name": "강서연",
+  "email": "gsy0122@gmail.com",
+  "phone": "010-8366-9272",
+  "profilePath": "a.jpg"
+}
+
+<> 2019-04-22T030530.200.json
+
+###
+
+PUT http://localhost:8080/post/update/1
+Content-Type: application/json
+
+{
+  "content": "hi there update"
+}
+
+<> 2019-04-22T030502.500.json
+
+###
+
+PUT http://localhost:8080/post/update/1
+Content-Type: application/json
+
+{
+  "content": "hi there update"
+}
+
+<> 2019-04-22T030355.500.json
+
+###
+
+PUT http://localhost:8080/post/update/1
+Content-Type: application/json
+
+{
+  "content": "hi there update"
+}
+
+<> 2019-04-22T030158.500.json
+
+###
+
+GET http://localhost:8080/post/read/2
+Accept: application/json
+
+<> 2019-04-22T030127.200.json
+
+###
+
+GET http://localhost:8080/post/read
+Accept: application/json
+
+<> 2019-04-22T030125.200.json
+
+###
+
+PUT http://localhost:8080/post/update/2
+Content-Type: application/json
+
+{
+  "content": "hi there update"
+}
+
+<> 2019-04-22T030116.500.json
+
+###
+
+GET http://localhost:8080/post/read
+Accept: application/json
+
+<> 2019-04-22T030046.200.json
+
+###
+
+PUT http://localhost:8080/post/update/2
+Content-Type: application/json
+
+{
+  "content": "hi there update"
+}
+
+<> 2019-04-22T030034.500.json
+
+###
+
+POST http://localhost:8080/post/create
+Content-Type: application/json
+
+{
+  "title": "hi",
+  "content": "hi there",
+  "userId": "1",
+  "imagePath": "a.jpg"
+}
+
+<> 2019-04-22T030030.200.json
+
+###
+
+POST http://localhost:8080/post/create
+Content-Type: application/json
+
+{
+  "title": "hi",
+  "content": "hi there",
+  "userId": "gsy0122",
+  "imagePath": "a.jpg"
+}
+
+<> 2019-04-22T030022.200.json
+
+###
+
+GET http://localhost:8080/user/read
+Accept: application/json
+
+<> 2019-04-22T030018.200.json
+
+###
+
+DELETE http://localhost:8080/user/delete/1
+Accept: application/json
+
+<> 2019-04-22T030016.200.json
+
+###
+
+GET http://localhost:8080/user/read
+Accept: application/json
+
+<> 2019-04-22T030013.200.json
+
+###
+
+PUT http://localhost:8080/user/update/1
+Content-Type: application/json
+
+{
+  "email": "gsy0122@naver.com"
+}
+
+<> 2019-04-22T030011.200.json
+
+###
+
+GET http://localhost:8080/user/read/1
+Accept: application/json
+
+<> 2019-04-22T030008.200.json
+
+###
+
+POST http://localhost:8080/user/create
+Content-Type: application/json
+
+{
+  "account": "gsy0122",
+  "password": "1234",
+  "name": "강서연",
+  "email": "gsy0122@gmail.com",
+  "phone": "010-8366-9272",
+  "profilePath": "a.jpg"
+}
+
+<> 2019-04-22T030005.200.json
+
+###
+
+DELETE http://localhost:8080/user/delete/1
+Accept: application/json
+
+<> 2019-04-22T025940.200.json
+
+###
+

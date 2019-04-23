@@ -9,6 +9,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -18,11 +19,14 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String userId;
+    private Long userId;
     @Column(nullable = false)
     private String title;
-    @Column(nullable = false)
+    // LOB BLOB CLOB
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String content;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    private List<Attachment> pictures;
     @CreationTimestamp
     @Column(updatable = false, nullable = false)
     @JsonFormat(pattern = "yyyy-mm-dd HH:mm:ss")
@@ -31,6 +35,4 @@ public class Post {
     @Column(nullable = false)
     @JsonFormat(pattern = "yyyy-mm-dd HH:mm:ss")
     private LocalDateTime modified;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private String imagePath;
 }

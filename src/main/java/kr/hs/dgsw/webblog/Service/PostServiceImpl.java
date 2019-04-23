@@ -24,13 +24,19 @@ public class PostServiceImpl implements PostService {
         return postRepository.findById(id).isPresent() ? postRepository.findById(id).get() : null;
     }
 
+    public Post readByUserId(Long userId) {
+        return postRepository
+                .findTopByUserIdOrderByIdDesc(userId)
+                .orElse(null);
+    }
+
     @Override
     public Post update(Long id, Post post) {
         return postRepository.findById(id)
                 .map(found -> {
                     found.setTitle(Optional.ofNullable(post.getTitle()).orElse(found.getTitle()));
                     found.setContent(Optional.ofNullable(post.getContent()).orElse(found.getContent()));
-                    found.setImagePath(Optional.ofNullable(post.getImagePath()).orElse(found.getImagePath()));
+                    found.setPictures(Optional.ofNullable(post.getPictures()).orElse(found.getPictures()));
                     return postRepository.save(found);
                 })
                 .orElse(null);

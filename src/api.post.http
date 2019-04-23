@@ -12,11 +12,11 @@ Content-Type: application/json
   "title": "hi",
   "content": "hi there",
   "userId": "1",
-  "imagePath": "a.jpg"
+  "pictures": null
 }
 
 ###
-PUT http://localhost:8080/post/update/1
+PUT http://localhost:8080/post/update/3
 Content-Type: application/json
 
 {
@@ -24,11 +24,11 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:8080/post/delete/1
+DELETE http://localhost:8080/post/delete/3
 Accept: application/json
 
 ###
-GET http://localhost:8080/post/read/2
+GET http://localhost:8080/post/read/3
 Accept: application/json
 
 ###

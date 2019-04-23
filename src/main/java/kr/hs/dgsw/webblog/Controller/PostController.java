@@ -1,11 +1,11 @@
 package kr.hs.dgsw.webblog.Controller;
 
 import kr.hs.dgsw.webblog.Domain.Post;
+import kr.hs.dgsw.webblog.Protocol.ResponseFormat;
+import kr.hs.dgsw.webblog.Protocol.ResponseType;
 import kr.hs.dgsw.webblog.Service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class PostController {
@@ -13,23 +13,92 @@ public class PostController {
     private PostService postService;
 
     @PostMapping("/post/create")
-    public Post create(@RequestBody Post post) {
-        return postService.create(post);
+    public ResponseFormat create(@RequestBody Post post) {
+        if (postService.create(post) != null) {
+            return new ResponseFormat(
+                    ResponseType.POST_ADD,
+                    postService.create(post),
+                    post.getId()
+            );
+        } else {
+            return new ResponseFormat(
+                    ResponseType.FAIL,
+                    null
+            );
+        }
     }
     @PutMapping("/post/update/{id}")
-    public Post update(@PathVariable Long id, @RequestBody Post post) {
-        return postService.update(id, post);
+    public ResponseFormat update(@PathVariable Long id, @RequestBody Post post) {
+        if (postService.update(id, post) != null) {
+            return new ResponseFormat(
+                    ResponseType.POST_UPDATE,
+                    postService.update(id, post),
+                    post.getId()
+            );
+        } else {
+            return new ResponseFormat(
+                    ResponseType.FAIL,
+                    null
+            );
+        }
     }
     @DeleteMapping("/post/delete/{id}")
-    public boolean delete(@PathVariable Long id) {
-        return postService.delete(id);
+    public ResponseFormat delete(@PathVariable Long id) {
+        if (postService.delete(id)) {
+            return new ResponseFormat(
+                    ResponseType.POST_DELETE,
+                    postService.delete(id),
+                    id
+            );
+        } else {
+            return new ResponseFormat(
+                    ResponseType.FAIL,
+                    null
+            );
+        }
     }
     @GetMapping("/post/read/{id}")
-    public Post read(@PathVariable Long id) {
-        return postService.read(id);
+    public ResponseFormat read(@PathVariable Long id) {
+        if (postService.read(id) != null) {
+            return new ResponseFormat(
+                    ResponseType.POST_GET,
+                    postService.read(id),
+                    id
+            );
+        } else {
+            return new ResponseFormat(
+                    ResponseType.FAIL,
+                    null
+            );
+        }
+    }
+    @GetMapping("/post/read/user/{userId}")
+    public ResponseFormat readByUserId(@PathVariable Long userId) {
+        if (postService.readByUserId(userId) != null) {
+            return new ResponseFormat(
+                    ResponseType.POST_GET_BY_USER,
+                    postService.readByUserId(userId),
+                    userId
+            );
+        } else {
+            return new ResponseFormat(
+                    ResponseType.FAIL,
+                    null
+            );
+        }
     }
     @GetMapping("/post/read")
-    public List<Post> readAll() {
-        return postService.readAll();
+    public ResponseFormat readAll() {
+        if (postService.readAll() != null) {
+            return new ResponseFormat(
+                    ResponseType.POST_GET_ALL,
+                    postService.readAll()
+            );
+        } else {
+            return new ResponseFormat(
+                    ResponseType.FAIL,
+                    null
+            );
+        }
     }
 }
