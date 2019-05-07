@@ -13,11 +13,12 @@ public class UserController {
     private UserService userService;
     @PostMapping("/user/create")
     public ResponseFormat create(@RequestBody User user) {
-        if (userService.create(user) != null) {
+        User newUser = userService.create(user);
+        if (newUser != null) {
             return new ResponseFormat(
                     ResponseType.USER_ADD,
-                    userService.create(user),
-                    user.getId()
+                    newUser,
+                    newUser.getId()
             );
         } else {
             return new ResponseFormat(

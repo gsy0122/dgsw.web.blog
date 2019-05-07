@@ -13,8 +13,8 @@ public enum ResponseType {
     POST_DELETE     (202, "ID [%d]의 게시글을 삭제하였습니다."),
     POST_ADD        (203, "ID [%d]의 게시글을 추가하였습니다."),
     POST_UPDATE     (204, "ID [%d]의 게시글을 수정하였습니다."),
-    POST_GET_ALL    (105, "전체 게시글을 조회하였습니다."),
-    POST_GET_BY_USER        (106, "USER ID [%d]의 게시글을 조회하였습니다."),
+    POST_GET_ALL    (205, "전체 게시글을 조회하였습니다."),
+    POST_GET_BY_USER        (206, "USER ID [%d]의 게시글을 조회하였습니다."),
 
     ATTACHMENT_STORED       (301, "이미지를 저장하였습니다."),
     ;

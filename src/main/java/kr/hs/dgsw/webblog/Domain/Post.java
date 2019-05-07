@@ -1,7 +1,6 @@
 package kr.hs.dgsw.webblog.Domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
@@ -35,4 +34,10 @@ public class Post {
     @Column(nullable = false)
     @JsonFormat(pattern = "yyyy-mm-dd HH:mm:ss")
     private LocalDateTime modified;
+
+    public Post(Long userId, String title, String content) {
+        this.userId = userId;
+        this.title = title;
+        this.content = content;
+    }
 }

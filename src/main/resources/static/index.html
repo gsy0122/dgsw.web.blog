@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style.css?after" rel="stylesheet"/>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="app.js?after"></script>
+</head>
+<body>
+<div>
+    <header class="container">DGSW 블로그</header>
+    <section id="main-container" class="container">
+        <div class="content"></div>
+    </section>
+    <aside class="container left-container">
+        <div style="position: relative; top: 25px;">
+            <button onclick="openPostDialog()">새 글 입력</button>
+            <div id="post-list" style="position: relative; top: 15px;"></div>
+        </div>
+    </aside>
+    <aside class="container right-container">
+        <div id="user"></div>
+    </aside>
+    <footer class="container footer">Powered By DGSW</footer>
+</div>
+<div id="post" style="display: none;">
+    <div id="post-container">
+        <div class="post-dialog">
+            <div style="margin: 30px 0 30px 0">
+                <input id="new-title" size="49" placeholder="제목"><br>
+                <textarea id="new-content" cols="50" rows="10" placeholder="내용"
+                          style="position: relative; top: 15px;"></textarea>
+            </div>
+            <div style="margin: 30px 0">
+                <button onclick="addPost()">확인</button>
+                <button onclick="closePostDialog()">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

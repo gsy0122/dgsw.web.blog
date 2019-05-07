@@ -14,11 +14,12 @@ public class PostController {
 
     @PostMapping("/post/create")
     public ResponseFormat create(@RequestBody Post post) {
-        if (postService.create(post) != null) {
+        Post newPost = postService.create(post);
+        if (newPost != null) {
             return new ResponseFormat(
                     ResponseType.POST_ADD,
-                    postService.create(post),
-                    post.getId()
+                    newPost,
+                    newPost.getId()
             );
         } else {
             return new ResponseFormat(
